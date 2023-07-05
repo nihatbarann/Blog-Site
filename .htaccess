@@ -1,0 +1,12 @@
+
+  Options -Indexes
+
+RewriteEngine   on
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$    /phpMvc/index.php?url=$1 [L,NC,QSA]
+
+ErrorDocument 404 /phpMvc/view/_404.view.php
+
